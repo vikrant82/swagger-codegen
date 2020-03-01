@@ -1715,6 +1715,10 @@ components:
       - className
       type: object
       properties:
+        id:
+          type: integer
+          format: int64
+          x-is-unique: true
         className:
           type: string
         color:
