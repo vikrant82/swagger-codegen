@@ -12,18 +12,11 @@ import io.swagger.model.*;
 
 import io.swagger.model.SinglePetResponse;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaInflectorServerCodegen", date = "2020-02-29T02:28:40.316-05:00[America/Bogota]")public class RandomPetController  {
-  /** 
-   * Uncomment and implement as you see fit.  These operations will map
-   * Directly to operation calls from the routing logic.  Because the inflector
-   * Code allows you to implement logic incrementally, they are disabled.
-   **/
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaInflectorServerCodegen", date = "2020-02-29T02:28:40.316-05:00[America/Bogota]")
+public class RandomPetController  {
 
-  /*
     public ResponseContext getRandomPet(RequestContext request ) {
-        return new ResponseContext().status(Status.INTERNAL_SERVER_ERROR).entity( "Not implemented" );
+        return new ResponseContext().status(Status.OK).entity(new SinglePetResponse().pet(new Dog()));
     }
-  */
-
 }
 

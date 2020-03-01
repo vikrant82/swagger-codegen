@@ -9,12 +9,31 @@ import io.swagger.v3.oas.annotations.media.Schema;
 
 
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaInflectorServerCodegen", date = "2020-02-29T02:28:40.316-05:00[America/Bogota]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaInflectorServerCodegen", date = "2020-03-01T10:27:03.483-05:00[America/Bogota]")
 public class Animal   {
+  @JsonProperty("id")
+  private Long id = null;
   @JsonProperty("className")
   private String className = null;
   @JsonProperty("color")
   private String color = "red";
+  /**
+   **/
+  public Animal id(Long id) {
+    this.id = id;
+    return this;
+  }
+
+  
+  @Schema(description = "")
+  @JsonProperty("id")
+  public Long getId() {
+    return id;
+  }
+  public void setId(Long id) {
+    this.id = id;
+  }
+
   /**
    **/
   public Animal className(String className) {
@@ -59,19 +78,21 @@ public class Animal   {
       return false;
     }
     Animal animal = (Animal) o;
-    return Objects.equals(className, animal.className) &&
+    return Objects.equals(id, animal.id) &&
+        Objects.equals(className, animal.className) &&
         Objects.equals(color, animal.color);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(className, color);
+    return Objects.hash(id, className, color);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Animal {\n");
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    className: ").append(toIndentedString(className)).append("\n");
     sb.append("    color: ").append(toIndentedString(color)).append("\n");
     sb.append("}");
