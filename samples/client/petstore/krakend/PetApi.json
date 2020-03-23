@@ -1,0 +1,53 @@
+{
+    "version": 2,
+    "name": "PetApi",
+    "port": 8080,
+    "cache_ttl": "3600s",
+    "timeout": "3s",
+    "extra_config": {
+      "github_com/devopsfaith/krakend-gologging": {
+        "level":  "DEBUG",
+        "prefix": "[KRAKEND]",
+        "syslog": false,
+        "stdout": true
+      },
+      "github_com/devopsfaith/krakend-metrics": {
+        "collection_time": "60s",
+        "proxy_disabled": false,
+        "router_disabled": false,
+        "backend_disabled": false,
+        "endpoint_disabled": false,
+        "listen_address": ":8090"
+      },
+    },
+    "endpoints": [
+        {
+            "endpoint": "/pet",
+            "method": "POST"
+        },
+        {
+            "endpoint": "/pet/{petId}",
+            "method": "DELETE"
+        },
+        {
+            "endpoint": "/pet/findByStatus",
+            "method": "GET"
+        },
+        {
+            "endpoint": "/pet/findByTags",
+            "method": "GET"
+        },
+        {
+            "endpoint": "/pet/{petId}",
+            "method": "GET"
+        },
+        {
+            "endpoint": "/pet",
+            "method": "PUT"
+        },
+        {
+            "endpoint": "/pet/{petId}",
+            "method": "POST"
+        }
+    ]
+}
